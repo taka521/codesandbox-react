@@ -9,11 +9,15 @@ class Human extends React.Component {
 
   render() {
     return (
-      <h2>
+      <h2 onClick={this.onNameClick}>
         {this.state.name} {this.props.age}
       </h2>
     );
   }
+
+  onNameClick = () => {
+    this.setState({ name: this.state.name + "san" });
+  };
 }
 
 render(<Human age="3" />, document.getElementById("root"));
