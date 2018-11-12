@@ -1,9 +1,19 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { ReactComponent } from "./ReactComponent";
+class Human extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "Test" };
+  }
 
-render(
-  <ReactComponent name="tanaka" music="jazz" />,
-  document.getElementById("root")
-);
+  render() {
+    return (
+      <h2>
+        {this.state.name} {this.props.age}
+      </h2>
+    );
+  }
+}
+
+render(<Human age="3" />, document.getElementById("root"));
