@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
 
+import "./styles.css";
+
 class H2O extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +11,7 @@ class H2O extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={this.H2OState(this.state.temp)}>
         <h2>
           phase: {this.H2OState(this.state.temp)},{this.state.temp}度
         </h2>
